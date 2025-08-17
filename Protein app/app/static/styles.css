@@ -1,0 +1,35 @@
+.sequence {
+  font-family: monospace;
+  font-size: 1.2rem;
+  white-space: pre-wrap;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  user-select: text;
+}
+
+.prediction {
+  font-family: monospace;
+  font-size: 1.4rem;
+  white-space: pre-wrap;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  user-select: text;
+}
+
+/* Colors for secondary structure */
+.ss-H {
+  color: #d6336c; /* red-ish for Helix */
+  font-weight: bold;
+}
+
+.ss-E {
+  color: #0d6efd; /* blue for Strand */
+  font-weight: bold;
+}
+
+.ss-C {
+  color: #6c757d; /* gray for Coil */
+  font-weight: bold;
+}

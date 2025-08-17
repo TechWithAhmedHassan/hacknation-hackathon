@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Protein Structure Predictor{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Predict Protein Family</h1>
+
+<form method="post" action="/predict" novalidate>
+  <div class="mb-3">
+    <label for="sequence" class="form-label">Protein Sequence (amino acids):</label>
+    <textarea
+      class="form-control"
+      id="sequence"
+      name="sequence"
+      rows="4"
+      placeholder="Enter your amino acid sequence (e.g., MVLSPADKTNVKAA...)"
+      required
+    >{{ request.form.sequence if request.form.sequence else "" }}</textarea>
+    <div class="form-text">Only use valid amino acid single-letter codes.</div>
+  </div>
+  {% if error %}
+  <div class="alert alert-danger">{{ error }}</div>
+  {% endif %}
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}
